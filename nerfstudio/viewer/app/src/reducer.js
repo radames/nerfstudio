@@ -4,7 +4,7 @@ const initialState = {
   // the websocket connection state
   websocketState: {
     isConnected: false,
-    websocket_url: `ws://${window.location.host}/server`,
+    websocket_url: `${window.location.protocol === 'https:' ? 'wss' : 'ws'}://${window.location.host}/server`,
   },
 
   // for sending actual commands to the client
